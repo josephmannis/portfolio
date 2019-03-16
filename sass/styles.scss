@@ -1,0 +1,186 @@
+$text_accent: #e9dbc3;
+$text_main: #fff;
+
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: 'Work Sans';
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+h1 {
+    font-weight: 600;
+    color: $text_accent;
+    font-size: 48px;
+    margin-bottom: 0;
+}
+
+h2 {
+    font-weight: normal;
+    color: $text_main;
+    font-size: 36px;
+    margin-top: 0;
+}
+
+.container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.nav-bar {
+    position: absolute;
+    margin-top: 5%;
+    width: 100%;
+}
+
+.nav-links {
+    position: absolute;
+    white-space: nowrap;
+    right: 5%;
+}
+
+.nav-link {
+    font-family: 'Work Sans';
+    font-weight: normal;
+    color: $text-main;
+    font-size: 24px;
+    display: inline;
+    margin-left: 10%;
+}
+
+.header-text {
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
+}
+
+.splash-img {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+
+    position: absolute;
+    bottom: 0;
+    max-width: 100%;
+
+}
+
+.splash-img-right {
+    right: 0;
+}
+
+.splash-img-left {
+    left: 0;
+}
+
+.splash-img-top {
+    top: 0;
+}
+
+#right-fog {
+    max-width: 1496px;
+}
+
+#right-mountain {
+    max-width: 1082px;
+}
+
+#left-mountain-fade {
+    max-width: 764px;
+}
+
+#left-mountain {
+    max-width: 1524px;
+}
+
+#left-cloud-mountain {
+    max-width: 1414px;
+}
+
+#right-bg-fog {
+    max-width: 856px;
+}
+
+#left-bg-fog {
+    max-width: 1162px;
+}
+
+#bg-sun {
+    max-width: 50%;
+    transition: ease all 5s;
+}
+
+.background-gradient {
+    background: -moz-radial-gradient(44.63% -1.19%, ellipse farthest-corner, rgba(239, 185, 130, 1) 0%, rgba(213, 110, 127, 1) 60.68%);
+    background: -webkit-radial-gradient(44.63% -1.19%, ellipse farthest-corner, rgba(239, 185, 130, 1) 0%, rgba(213, 110, 127, 1) 60.68%);
+    background: -webkit-gradient(radial, 44.63% -1.19%, 0, 44.63% -1.19%, 3378.31, color-stop(0, rgba(239, 185, 130, 1)), color-stop(0.6068, rgba(213, 110, 127, 1)));
+    background: -o-radial-gradient(44.63% -1.19%, ellipse farthest-corner, rgba(239, 185, 130, 1) 0%, rgba(213, 110, 127, 1) 60.68%);
+    background: -ms-radial-gradient(44.63% -1.19%, ellipse farthest-corner, rgba(239, 185, 130, 1) 0%, rgba(213, 110, 127, 1) 60.68%);
+    background: radial-gradient(44.63% -1.19%, ellipse farthest-corner, rgba(239, 185, 130, 1) 0%, rgba(213, 110, 127, 1) 60.68%);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Stlye=2);
+}
+
+@media only screen and (max-width: 800px) {
+    .splash-img-top {
+        top: 15%;
+        left: 25%;
+    }
+}
+
+// For desktops with a fairly low height
+@media only screen and (max-height: 800px) and (min-width: 800px) {
+    .splash-img {
+        position: absolute;
+        bottom: -20%;
+        max-width: 100%;
+    }
+
+    .foreground-img {
+        bottom: 0;
+    }
+}
+
+// For those thicc desktops
+@media only screen and (min-height: 1081px) and (min-width: 1921px) {
+    #right-fog {
+        max-width: 2992px;
+    }
+
+    #right-mountain {
+        max-width: 2162px;
+    }
+
+    #left-mountain-fade {
+        max-width: 1456px;
+    }
+
+    #left-mountain {
+        max-width: 3047px;
+    }
+
+    #left-cloud-mountain {
+        max-width: 2829px;
+    }
+
+    #right-bg-fog {
+        max-width: 1356px;
+    }
+
+    #left-bg-fog {
+        max-width: 2324px;
+    }
+
+    #bg-sun {
+        max-width: 50%;
+        transition: ease all 3s;
+    }
+}
