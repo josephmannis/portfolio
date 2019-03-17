@@ -65,7 +65,6 @@ h2 {
   user-select: none;
   position: absolute;
   bottom: 0;
-  max-width: 100%;
 }
 
 .splash-img-right {
@@ -81,31 +80,31 @@ h2 {
 }
 
 #right-fog {
-  max-width: 1496px;
+  max-width: 78vw;
 }
 
 #right-mountain {
-  max-width: 1082px;
+  max-width: 56vw;
 }
 
 #left-mountain-fade {
-  max-width: 764px;
+  max-width: 40vw;
 }
 
 #left-mountain {
-  max-width: 1524px;
+  max-width: 79vw;
 }
 
 #left-cloud-mountain {
-  max-width: 1414px;
+  max-width: 74vw;
 }
 
 #right-bg-fog {
-  max-width: 856px;
+  max-width: 46vw;
 }
 
 #left-bg-fog {
-  max-width: 1162px;
+  max-width: 60vw;
 }
 
 #bg-sun {
@@ -138,40 +137,6 @@ h2 {
 
   .foreground-img {
     bottom: 0;
-  }
-}
-@media only screen and (min-height: 1081px) and (min-width: 1921px) {
-  #right-fog {
-    max-width: 2992px;
-  }
-
-  #right-mountain {
-    max-width: 2162px;
-  }
-
-  #left-mountain-fade {
-    max-width: 1456px;
-  }
-
-  #left-mountain {
-    max-width: 3047px;
-  }
-
-  #left-cloud-mountain {
-    max-width: 2829px;
-  }
-
-  #right-bg-fog {
-    max-width: 1356px;
-  }
-
-  #left-bg-fog {
-    max-width: 2324px;
-  }
-
-  #bg-sun {
-    max-width: 50%;
-    transition: ease all 3s;
   }
 }
 
