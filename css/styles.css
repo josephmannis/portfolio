@@ -30,6 +30,12 @@ h2 {
   width: 100%;
 }
 
+.placeholder {
+  width: 100vw;
+  height: 100vh;
+  background: #000033;
+}
+
 .nav-bar {
   position: absolute;
   margin-top: 5%;
@@ -110,8 +116,46 @@ h2 {
 #bg-sun {
   max-width: 50%;
   transition: ease all 5s;
+  margin-right: 10%;
+  margin-top: 5%;
+  -webkit-animation: spin 60s linear infinite;
+  -moz-animation: spin 60s linear infinite;
+  animation: spin 60s linear infinite;
 }
 
+@keyframes wave {
+  0% {
+    width: 60vw;
+  }
+  25% {
+    width: 55vw;
+  }
+  50% {
+    width: 50vw;
+  }
+  75% {
+    width: 55vw;
+  }
+  100% {
+    width: 60vw;
+  }
+}
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
 .background-gradient {
   background: -moz-radial-gradient(44.63% -1.19%, ellipse farthest-corner, #efb982 0%, #d56e7f 60.68%);
   background: -webkit-radial-gradient(44.63% -1.19%, ellipse farthest-corner, #efb982 0%, #d56e7f 60.68%);
@@ -130,13 +174,49 @@ h2 {
 }
 @media only screen and (max-height: 800px) and (min-width: 800px) {
   .splash-img {
-    position: absolute;
     bottom: -20%;
-    max-width: 100%;
+  }
+
+  .container {
+    overflow: hidden;
   }
 
   .foreground-img {
     bottom: 0;
+  }
+}
+@media only screen and (max-width: 1919px) {
+  #right-fog {
+    max-width: 1496px;
+  }
+
+  #right-mountain {
+    max-width: 1082px;
+  }
+
+  #left-mountain-fade {
+    max-width: 764px;
+  }
+
+  #left-mountain {
+    max-width: 1524px;
+  }
+
+  #left-cloud-mountain {
+    max-width: 1414px;
+  }
+
+  #right-bg-fog {
+    max-width: 856px;
+  }
+
+  #left-bg-fog {
+    max-width: 1162px;
+  }
+
+  #bg-sun {
+    max-width: 50%;
+    transition: ease all 5s;
   }
 }
 

@@ -1,6 +1,27 @@
+// Styles
 $text_accent: #e9dbc3;
 $text_main: #fff;
+$body_background: #000033;
 
+// Sizes
+$right_fog_width: 78vw;
+$right_mountain_width: 56vw;
+$left_mountain_fade_width: 40vw;
+$left_mountain_width: 79vw;
+$left_cloud_mountain_width: 74vw;
+$right_background_fog_width: 46vw;
+$left_background_fog_width: 60vw;
+
+$static_right_fog_width: 1496px;
+$static_right_mountain_width: 1082px;
+$static_left_mountain_fade_width: 764px;
+$static_left_mountain_width: 1524px;
+$static_left_cloud_mountain_width: 1414px;
+$static_right_background_fog_width: 856px;
+$static_left_background_fog_width: 1162px;
+
+// Animations
+$sun_rotation_duration: 60s;
 
 html {
     height: 100%;
@@ -32,6 +53,12 @@ h2 {
     position: relative;
     height: 100%;
     width: 100%;
+}
+
+.placeholder {
+    width: 100vw;
+    height: 100vh;
+    background: #000033;
 }
 
 .nav-bar {
@@ -85,36 +112,87 @@ h2 {
 }
 
 #right-fog {
-    max-width: 78vw;
+    max-width: $right_fog_width;
 }
 
 #right-mountain {
-    max-width: 56vw;
+    max-width: $right_mountain_width;
 }
 
 #left-mountain-fade {
-    max-width: 40vw;
+    max-width: $left_mountain_fade_width;
 }
 
 #left-mountain {
-    max-width: 79vw;
+    max-width: $left_mountain_width;
 }
 
 #left-cloud-mountain {
-    max-width: 74vw;
+    max-width: $left_cloud_mountain_width;
 }
 
 #right-bg-fog {
-    max-width: 46vw;
+    max-width: $right_background_fog_width;
 }
 
 #left-bg-fog {
-    max-width: 60vw;
+    max-width: $left_background_fog_width;
+    // animation: wave 6s ease infinite;
 }
 
+// TODO: Make the sun a base, and then only animate the rings
 #bg-sun {
     max-width: 50%;
     transition: ease all 5s;
+    margin-right: 10%;
+    margin-top: 5%;
+
+    -webkit-animation: spin $sun_rotation_duration linear infinite;
+    -moz-animation: spin $sun_rotation_duration linear infinite;
+    animation: spin $sun_rotation_duration linear infinite;
+}
+
+
+@keyframes wave {
+    0% {
+        width: 60vw;
+    }
+
+    25% {
+        width: 55vw;
+    }
+
+    50% {
+        width: 50vw;
+    }
+
+    75% {
+        width: 55vw;
+    }
+
+    100% {
+        width: 60vw;
+    }
+}
+
+
+@-moz-keyframes spin {
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
 }
 
 .background-gradient {
@@ -137,12 +215,49 @@ h2 {
 // For desktops with a fairly low height
 @media only screen and (max-height: 800px) and (min-width: 800px) {
     .splash-img {
-        position: absolute;
         bottom: -20%;
-        max-width: 100%;
+    }
+
+    .container {
+        overflow: hidden;
     }
 
     .foreground-img {
         bottom: 0;
+    }
+}
+
+@media only screen and (max-width: 1919px) {
+    #right-fog {
+        max-width: $static_right_fog_width;
+    }
+
+    #right-mountain {
+        max-width: $static_right_mountain_width;
+    }
+
+    #left-mountain-fade {
+        max-width: $static_left_mountain_fade_width;
+    }
+
+    #left-mountain {
+        max-width: $static_left_mountain_width;
+    }
+
+    #left-cloud-mountain {
+        max-width: $static_left_cloud_mountain_width;
+    }
+
+    #right-bg-fog {
+        max-width: $static_right_background_fog_width;
+    }
+
+    #left-bg-fog {
+        max-width: $static_left_background_fog_width;
+    }
+
+    #bg-sun {
+        max-width: 50%;
+        transition: ease all 5s;
     }
 }
