@@ -24,6 +24,7 @@ $static_left_background_fog_width: 1162px;
 $ring_one_rotation_duration: 60s;
 $ring_two_rotation_duration: 45s;
 $ring_three_rotation_duration: 30s;
+$sun_piece_ease_duration: 2s;
 
 
 html {
@@ -58,9 +59,6 @@ h2 {
     width: 100%;
 }
 
-.sun-container {
-    padding-right: 10vw;
-}
 
 .placeholder {
     width: 100vw;
@@ -150,14 +148,18 @@ h2 {
 // TODO: Make the sun a base, and then only animate the rings
 #bg-sun {
     width: 50vw;
-    transition: ease all 5s;
+    transition: ease all $sun_piece_ease_duration;
 }
 
 .sun-ring {
     width: 50vw;
-    transition: ease all 5s;
-    position: absolute;
+    transition: ease all $sun_piece_ease_duration;
     top: 0;
+}
+
+.sun-piece {
+    position: absolute;
+    right: 10vw;
 }
 
 #sun-ring-one {
@@ -203,7 +205,6 @@ h2 {
     }
 }
 
-
 @keyframes wave {
     0% {
         width: 60vw;
@@ -240,6 +241,11 @@ h2 {
     .splash-img-top {
         top: 15%;
         left: 25%;
+    }
+
+    .sun-piece {
+        position: absolute;
+        right: 25vw;
     }
 }
 

@@ -30,10 +30,6 @@ h2 {
   width: 100%;
 }
 
-.sun-container {
-  padding-right: 10vw;
-}
-
 .placeholder {
   width: 100vw;
   height: 100vh;
@@ -119,14 +115,18 @@ h2 {
 
 #bg-sun {
   width: 50vw;
-  transition: ease all 5s;
+  transition: ease all 2s;
 }
 
 .sun-ring {
   width: 50vw;
-  transition: ease all 5s;
-  position: absolute;
+  transition: ease all 2s;
   top: 0;
+}
+
+.sun-piece {
+  position: absolute;
+  right: 10vw;
 }
 
 #sun-ring-one {
@@ -196,6 +196,11 @@ h2 {
   .splash-img-top {
     top: 15%;
     left: 25%;
+  }
+
+  .sun-piece {
+    position: absolute;
+    right: 25vw;
   }
 }
 @media only screen and (max-height: 800px) and (min-width: 800px) {
