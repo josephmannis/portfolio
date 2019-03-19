@@ -21,7 +21,10 @@ $static_right_background_fog_width: 856px;
 $static_left_background_fog_width: 1162px;
 
 // Animations
-$sun_rotation_duration: 60s;
+$ring_one_rotation_duration: 60s;
+$ring_two_rotation_duration: 45s;
+$ring_three_rotation_duration: 30s;
+
 
 html {
     height: 100%;
@@ -53,6 +56,10 @@ h2 {
     position: relative;
     height: 100%;
     width: 100%;
+}
+
+.sun-container {
+    padding-right: 10vw;
 }
 
 .placeholder {
@@ -142,14 +149,58 @@ h2 {
 
 // TODO: Make the sun a base, and then only animate the rings
 #bg-sun {
-    max-width: 50%;
+    width: 50vw;
     transition: ease all 5s;
-    margin-right: 10%;
-    margin-top: 5%;
+}
 
-    -webkit-animation: spin $sun_rotation_duration linear infinite;
-    -moz-animation: spin $sun_rotation_duration linear infinite;
-    animation: spin $sun_rotation_duration linear infinite;
+.sun-ring {
+    width: 50vw;
+    transition: ease all 5s;
+    position: absolute;
+    top: 0;
+}
+
+#sun-ring-one {
+    animation: spin_one $ring_one_rotation_duration linear infinite;
+}
+
+#sun-ring-two {
+    animation: spin_two $ring_two_rotation_duration linear infinite;
+}
+
+#sun-ring-three {
+    animation: spin_three $ring_three_rotation_duration linear infinite;
+}
+
+// TODO: use mixin for args?
+@keyframes spin_one {
+    from {
+        transform: rotate(0deg) translate(-5%) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translate(-5%) rotate(-360deg);
+    }
+}
+
+@keyframes spin_two {
+    from {
+        transform: rotate(0deg) translate(5%) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translate(5%) rotate(-360deg);
+    }
+}
+
+@keyframes spin_three {
+    from {
+        transform: rotate(0deg) translate(-7%) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translate(-7%) rotate(-360deg);
+    }
 }
 
 
@@ -172,26 +223,6 @@ h2 {
 
     100% {
         width: 60vw;
-    }
-}
-
-
-@-moz-keyframes spin {
-    100% {
-        -moz-transform: rotate(360deg);
-    }
-}
-
-@-webkit-keyframes spin {
-    100% {
-        -webkit-transform: rotate(360deg);
-    }
-}
-
-@keyframes spin {
-    100% {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
     }
 }
 
@@ -254,10 +285,5 @@ h2 {
 
     #left-bg-fog {
         max-width: $static_left_background_fog_width;
-    }
-
-    #bg-sun {
-        max-width: 50%;
-        transition: ease all 5s;
     }
 }

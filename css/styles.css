@@ -30,6 +30,10 @@ h2 {
   width: 100%;
 }
 
+.sun-container {
+  padding-right: 10vw;
+}
+
 .placeholder {
   width: 100vw;
   height: 100vh;
@@ -114,15 +118,53 @@ h2 {
 }
 
 #bg-sun {
-  max-width: 50%;
+  width: 50vw;
   transition: ease all 5s;
-  margin-right: 10%;
-  margin-top: 5%;
-  -webkit-animation: spin 60s linear infinite;
-  -moz-animation: spin 60s linear infinite;
-  animation: spin 60s linear infinite;
 }
 
+.sun-ring {
+  width: 50vw;
+  transition: ease all 5s;
+  position: absolute;
+  top: 0;
+}
+
+#sun-ring-one {
+  animation: spin_one 60s linear infinite;
+}
+
+#sun-ring-two {
+  animation: spin_two 45s linear infinite;
+}
+
+#sun-ring-three {
+  animation: spin_three 30s linear infinite;
+}
+
+@keyframes spin_one {
+  from {
+    transform: rotate(0deg) translate(-5%) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translate(-5%) rotate(-360deg);
+  }
+}
+@keyframes spin_two {
+  from {
+    transform: rotate(0deg) translate(5%) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translate(5%) rotate(-360deg);
+  }
+}
+@keyframes spin_three {
+  from {
+    transform: rotate(0deg) translate(-7%) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translate(-7%) rotate(-360deg);
+  }
+}
 @keyframes wave {
   0% {
     width: 60vw;
@@ -138,22 +180,6 @@ h2 {
   }
   100% {
     width: 60vw;
-  }
-}
-@-moz-keyframes spin {
-  100% {
-    -moz-transform: rotate(360deg);
-  }
-}
-@-webkit-keyframes spin {
-  100% {
-    -webkit-transform: rotate(360deg);
-  }
-}
-@keyframes spin {
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
   }
 }
 .background-gradient {
@@ -212,11 +238,6 @@ h2 {
 
   #left-bg-fog {
     max-width: 1162px;
-  }
-
-  #bg-sun {
-    max-width: 50%;
-    transition: ease all 5s;
   }
 }
 
