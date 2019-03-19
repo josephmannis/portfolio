@@ -1,30 +1,5 @@
-// Styles
-$text_accent: #e9dbc3;
-$text_main: #fff;
-$body_background: #000033;
-
-// Sizes
-$right_fog_width: 78vw;
-$right_mountain_width: 56vw;
-$left_mountain_fade_width: 40vw;
-$left_mountain_width: 79vw;
-$left_cloud_mountain_width: 74vw;
-$right_background_fog_width: 46vw;
-$left_background_fog_width: 60vw;
-
-$static_right_fog_width: 1496px;
-$static_right_mountain_width: 1082px;
-$static_left_mountain_fade_width: 764px;
-$static_left_mountain_width: 1524px;
-$static_left_cloud_mountain_width: 1414px;
-$static_right_background_fog_width: 856px;
-$static_left_background_fog_width: 1162px;
-
-// Animations
-$ring_one_rotation_duration: 60s;
-$ring_two_rotation_duration: 45s;
-$ring_three_rotation_duration: 30s;
-$sun_piece_ease_duration: 2s;
+@import "./variables.scss";
+@import "./sunstyles.scss";
 
 
 html {
@@ -145,65 +120,6 @@ h2 {
     // animation: wave 6s ease infinite;
 }
 
-// TODO: Make the sun a base, and then only animate the rings
-#bg-sun {
-    width: 50vw;
-    transition: ease all $sun_piece_ease_duration;
-}
-
-.sun-ring {
-    width: 50vw;
-    transition: ease all $sun_piece_ease_duration;
-    top: 0;
-}
-
-.sun-piece {
-    position: absolute;
-    right: 10vw;
-}
-
-#sun-ring-one {
-    animation: spin_one $ring_one_rotation_duration linear infinite;
-}
-
-#sun-ring-two {
-    animation: spin_two $ring_two_rotation_duration linear infinite;
-}
-
-#sun-ring-three {
-    animation: spin_three $ring_three_rotation_duration linear infinite;
-}
-
-// TODO: use mixin for args?
-@keyframes spin_one {
-    from {
-        transform: rotate(0deg) translate(-5%) rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg) translate(-5%) rotate(-360deg);
-    }
-}
-
-@keyframes spin_two {
-    from {
-        transform: rotate(0deg) translate(5%) rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg) translate(5%) rotate(-360deg);
-    }
-}
-
-@keyframes spin_three {
-    from {
-        transform: rotate(0deg) translate(-7%) rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg) translate(-7%) rotate(-360deg);
-    }
-}
 
 @keyframes wave {
     0% {
@@ -241,11 +157,6 @@ h2 {
     .splash-img-top {
         top: 15%;
         left: 25%;
-    }
-
-    .sun-piece {
-        position: absolute;
-        right: 25vw;
     }
 }
 

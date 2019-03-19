@@ -1,3 +1,61 @@
+#bg-sun {
+  width: 50vw;
+  transition: ease all 2s;
+}
+
+.sun-ring {
+  width: 50vw;
+  transition: ease all 2s;
+  top: 0;
+}
+
+.sun-piece {
+  position: absolute;
+  right: 10vw;
+}
+
+#sun-ring-one {
+  animation: spin_one 60s linear infinite;
+}
+
+#sun-ring-two {
+  animation: spin_two 45s linear infinite;
+}
+
+#sun-ring-three {
+  animation: spin_three 30s linear infinite;
+}
+
+@keyframes spin_one {
+  from {
+    transform: rotate(0deg) translate(-5%) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translate(-5%) rotate(-360deg);
+  }
+}
+@keyframes spin_two {
+  from {
+    transform: rotate(0deg) translate(5%) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translate(5%) rotate(-360deg);
+  }
+}
+@keyframes spin_three {
+  from {
+    transform: rotate(0deg) translate(-7%) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translate(-7%) rotate(-360deg);
+  }
+}
+@media only screen and (max-width: 800px) {
+  .sun-piece {
+    position: absolute;
+    right: 25vw;
+  }
+}
 html {
   height: 100%;
   width: 100%;
@@ -113,58 +171,6 @@ h2 {
   max-width: 60vw;
 }
 
-#bg-sun {
-  width: 50vw;
-  transition: ease all 2s;
-}
-
-.sun-ring {
-  width: 50vw;
-  transition: ease all 2s;
-  top: 0;
-}
-
-.sun-piece {
-  position: absolute;
-  right: 10vw;
-}
-
-#sun-ring-one {
-  animation: spin_one 60s linear infinite;
-}
-
-#sun-ring-two {
-  animation: spin_two 45s linear infinite;
-}
-
-#sun-ring-three {
-  animation: spin_three 30s linear infinite;
-}
-
-@keyframes spin_one {
-  from {
-    transform: rotate(0deg) translate(-5%) rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg) translate(-5%) rotate(-360deg);
-  }
-}
-@keyframes spin_two {
-  from {
-    transform: rotate(0deg) translate(5%) rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg) translate(5%) rotate(-360deg);
-  }
-}
-@keyframes spin_three {
-  from {
-    transform: rotate(0deg) translate(-7%) rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg) translate(-7%) rotate(-360deg);
-  }
-}
 @keyframes wave {
   0% {
     width: 60vw;
@@ -196,11 +202,6 @@ h2 {
   .splash-img-top {
     top: 15%;
     left: 25%;
-  }
-
-  .sun-piece {
-    position: absolute;
-    right: 25vw;
   }
 }
 @media only screen and (max-height: 800px) and (min-width: 800px) {
