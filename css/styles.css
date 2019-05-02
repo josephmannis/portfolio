@@ -66,6 +66,7 @@ body {
   margin: 0px;
   height: 100%;
   width: 100%;
+  overscroll-behavior-y: none;
 }
 
 h1 {
@@ -245,6 +246,33 @@ h2 {
   #left-bg-fog {
     max-width: 1162px;
   }
+}
+.fog-container {
+  filter: brightness(100%) contrast(1500%);
+}
+
+.fog-piece {
+  position: absolute;
+  filter: blur(20px);
+}
+
+.ball {
+  width: 15vw;
+  height: 15vw;
+  border-radius: 100%;
+  background: black;
+}
+
+#fog-piece-two {
+  left: 15vw;
+}
+
+#fog-piece-three {
+  left: 30vw;
+}
+
+#fog-piece-four {
+  left: 45vw;
 }
 
 /*# sourceMappingURL=styles.css.map */
