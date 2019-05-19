@@ -1,0 +1,38 @@
+@import "./variables.scss";
+
+
+.work-container {
+    display: inline-block;
+    width: 100%;
+    background-color: $body_background;
+    overflow: scroll;
+
+}
+
+#work-nav {
+    font-weight: bold;
+    color: $text_selected;
+}
+
+
+.work-links {
+    max-width: 100%;
+    padding-left: 11vw;
+    padding-top: 10vh;
+    overflow-y: scroll;
+    overscroll-behavior: none;
+}
+
+.work-link {
+    font-family: 'Work Sans';
+    width: 22vw;
+    font-weight: bolder;
+    color: $text_accent;
+    font-size: 200px;
+    user-select: none;
+}
+
+.work-link:hover {
+    color: $text_selected;
+    transition: $text_selection_duration;
+}

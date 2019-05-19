@@ -1,9 +1,12 @@
-// Styles
+// Styles // 
 $text_accent: #e9dbc3;
 $text_main: #fff;
+$text_selected: #D56E7F;
 $body_background: #000033;
+$nav_text_size: 22px;
 
-// Sizes
+// Sizes // 
+// Landscape
 $right_fog_width: 78vw;
 $right_mountain_width: 56vw;
 $left_mountain_fade_width: 40vw;
@@ -20,4 +23,23 @@ $static_left_cloud_mountain_width: 1414px;
 $static_right_background_fog_width: 856px;
 $static_left_background_fog_width: 1162px;
 
-// Animations
+// Nav Icons
+$nav_icon_size: 2vw;
+$nav_icon_expanded: 2.5vw;
+$nav_icon_margin: 1vw;
+
+// Margins
+$border_margin: 7vh;
+
+// Animations //
+// Sun
+$ring_one_rotation_duration: 60s;
+$ring_two_rotation_duration: 45s;
+$ring_three_rotation_duration: 30s;
+$sun_piece_ease_duration: 2s;
+
+// Text selection
+$text_selection_duration: .2s;
+
+// Nav
+$nav_expansion_duration: .1s;
