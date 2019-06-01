@@ -59,7 +59,6 @@
 .nav-container {
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: space-between;
   position: sticky;
   top: 0;
@@ -175,6 +174,34 @@
   transition: 0.2s;
 }
 
+#about-splash {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 62vw;
+}
+
+.about-text-container {
+  position: absolute;
+  left: 58vw;
+  top: 12vh;
+  width: 26vw;
+  z-index: 1;
+}
+
+.about-name {
+  font-weight: bolder;
+  color: #e9dbc3;
+  font-size: 8vw;
+  margin-bottom: 0;
+}
+
+.about-description {
+  color: #e9dbc3;
+  font-size: 1vw;
+  margin-top: 1vw;
+}
+
 html {
   height: 100%;
   width: 100%;
@@ -209,6 +236,13 @@ p {
   margin-inline-end: 0;
 }
 
+img {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 .header-text {
   position: absolute;
   left: 0%;
@@ -222,12 +256,6 @@ p {
 }
 
 .landscape-container {
-  height: 100%;
-  width: 100%;
-}
-
-.container {
-  position: relative;
   height: 100%;
   width: 100%;
 }
