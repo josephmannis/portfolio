@@ -5,20 +5,11 @@
     display: inline-block;
     width: 100%;
     background-color: $body_background;
-    overflow: scroll;
-
 }
-
-#work-nav {
-    font-weight: bold;
-    color: $text_selected;
-}
-
 
 .work-links {
     max-width: 100%;
     padding-left: 11vw;
-    padding-top: 10vh;
     overflow-y: scroll;
     overscroll-behavior: none;
 }
@@ -28,11 +19,23 @@
     width: 22vw;
     font-weight: bolder;
     color: $text_accent;
-    font-size: 200px;
+    font-size: 13vw;
     user-select: none;
 }
 
 .work-link:hover {
     color: $text_selected;
+    transition: $text_selection_duration;
+}
+
+#archive {
+    color: $body_background;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: $text_accent;
+}
+
+#archive:hover {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: $text_selected;
     transition: $text_selection_duration;
 }

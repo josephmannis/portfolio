@@ -149,4 +149,10 @@ p {
     filter: progid:DXImageTransform.Microsoft.Alpha(Stlye=2);
 }
 
+.main-content-container {
+    display: inline-block;
+    width: 100%;
+    background-color: $body_background;
+}
+
 @import "./queries";

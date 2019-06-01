@@ -58,25 +58,22 @@
 }
 .nav-container {
   display: flex;
-  width: 100%;
-  justify-content: center;
-}
-
-.nav-flex {
-  display: flex;
-  width: 100%;
-  justify-content: flex-end;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  padding: 7vh 7vh 0 7vh;
+  z-index: 1000;
 }
 
 .nav-bar {
-  position: sticky;
-  top: 7vh;
   font-size: 22px;
 }
 
 .nav-icon {
   width: 2vw;
-  margin-bottom: 1vw;
+  min-width: 40px;
   transition: 0.1s;
   transition-timing-function: ease-in-out;
 }
@@ -86,7 +83,7 @@
 }
 
 .nav-link {
-  margin-right: 7vh;
+  margin-left: 7vh;
   font-family: "Work Sans";
   font-weight: normal;
   color: #fff;
@@ -95,29 +92,20 @@
   user-select: none;
 }
 
-.nav-link:hover {
+.selected-link {
+  color: #D56E7F;
   font-weight: bold;
+}
+
+.nav-link:hover {
   color: #D56E7F;
   transition: 0.2s;
 }
 
 .nav-group {
   position: sticky;
-  margin-left: 7vh;
-  top: 7vh;
-}
-
-.nav-link {
-  position: sticky;
   top: 7vh;
   align-self: center;
-  margin-right: 7vh;
-  font-family: "Work Sans";
-  font-weight: normal;
-  color: #fff;
-  font-size: 1em;
-  text-decoration: none;
-  user-select: none;
 }
 
 .fog-container {
@@ -152,18 +140,11 @@
   display: inline-block;
   width: 100%;
   background-color: #000033;
-  overflow: scroll;
-}
-
-#work-nav {
-  font-weight: bold;
-  color: #D56E7F;
 }
 
 .work-links {
   max-width: 100%;
   padding-left: 11vw;
-  padding-top: 10vh;
   overflow-y: scroll;
   overscroll-behavior: none;
 }
@@ -173,12 +154,24 @@
   width: 22vw;
   font-weight: bolder;
   color: #e9dbc3;
-  font-size: 200px;
+  font-size: 13vw;
   user-select: none;
 }
 
 .work-link:hover {
   color: #D56E7F;
+  transition: 0.2s;
+}
+
+#archive {
+  color: #000033;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #e9dbc3;
+}
+
+#archive:hover {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #D56E7F;
   transition: 0.2s;
 }
 
@@ -314,6 +307,12 @@ p {
   background: -ms-radial-gradient(44.63% -1.19%, ellipse farthest-corner, #efb982 0%, #d56e7f 60.68%);
   background: radial-gradient(44.63% -1.19%, ellipse farthest-corner, #efb982 0%, #d56e7f 60.68%);
   filter: progid:DXImageTransform.Microsoft.Alpha(Stlye=2);
+}
+
+.main-content-container {
+  display: inline-block;
+  width: 100%;
+  background-color: #000033;
 }
 
 @media only screen and (max-width: 800px) {
