@@ -1,7 +1,6 @@
 .nav-container {
     display: flex;
     flex-direction: row;
-
     justify-content: space-between;
     position: sticky;
     top: 0;
@@ -24,12 +23,16 @@
     transform: scale(1.1);
 }
 
-.nav-link {
+.nav-container .nav-link {
     margin-left: $border_margin;
+
+}
+
+.nav-link {
     font-family: 'Work Sans';
+    font-size: 1em;
     font-weight: normal;
     color: $text-main;
-    font-size: 1em;
     text-decoration: none;
     user-select: none;
 }

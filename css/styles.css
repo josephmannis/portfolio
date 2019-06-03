@@ -81,12 +81,15 @@
   transform: scale(1.1);
 }
 
-.nav-link {
+.nav-container .nav-link {
   margin-left: 7vh;
+}
+
+.nav-link {
   font-family: "Work Sans";
+  font-size: 1em;
   font-weight: normal;
   color: #fff;
-  font-size: 1em;
   text-decoration: none;
   user-select: none;
 }
@@ -155,6 +158,7 @@
   color: #e9dbc3;
   font-size: 13vw;
   user-select: none;
+  text-decoration: none;
 }
 
 .work-link:hover {
@@ -200,6 +204,137 @@
   color: #e9dbc3;
   font-size: 1vw;
   margin-top: 1vw;
+}
+
+.project-information-container {
+  padding-left: 10vw;
+}
+
+.project-title {
+  font-weight: bolder;
+  color: #e9dbc3;
+  font-size: 8vw;
+}
+
+.description-container {
+  width: 44vw;
+}
+
+.project-information {
+  color: #e9dbc3;
+  font-size: 1vw;
+  margin-top: 2vw;
+}
+
+.project-date {
+  font-weight: bold;
+}
+
+.work-container {
+  display: flex;
+  flex-direction: row;
+  align-content: space-around;
+  flex-wrap: wrap;
+  padding: 10vw 10vw 0 10vw;
+}
+
+.work-hero {
+  flex-grow: 2;
+  flex-basis: 100%;
+}
+
+.work-image {
+  width: 100%;
+}
+
+.rounded-image {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.work-subimage {
+  flex-grow: 1;
+  flex-basis: 50%;
+  margin-top: 5vw;
+}
+
+.work-footer {
+  flex-shrink: 0;
+  margin-top: 10vw;
+  width: 100%;
+}
+
+.work-footer-wave {
+  width: 100%;
+  z-index: -1;
+}
+
+.project-link-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 100%;
+  padding: 0 10vw 0 10vw;
+}
+
+.project-link {
+  user-select: none;
+  font-weight: 200;
+  color: #e9dbc3;
+  font-size: 24px;
+  transition: 0.1s;
+  transition-timing-function: ease-in-out;
+}
+
+.project-link:hover {
+  color: #D56E7F;
+  transition: 0.2s;
+}
+
+.wave-group {
+  width: 100%;
+  position: absolute;
+  margin-top: 10vw;
+  z-index: -1;
+}
+
+.wave-container {
+  bottom: 0;
+  position: absolute;
+}
+
+#next-link {
+  align-self: flex-end;
+}
+
+#footer-wave-left {
+  left: 0;
+  width: 50vw;
+}
+
+#footer-wave-right {
+  right: 0;
+  width: 70vw;
+}
+
+@media only screen and (min-width: 1080px) {
+  .subimage-left {
+    padding-right: 2.5vw;
+  }
+
+  .subimage-right {
+    padding-left: 2.5vw;
+  }
+}
+@media only screen and (max-width: 1080px) {
+  .work-subimage {
+    flex-grow: 1;
+    flex-basis: 100%;
+  }
+}
+* {
+  box-sizing: border-box;
 }
 
 html {
@@ -338,7 +473,10 @@ img {
 }
 
 .main-content-container {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  align-items: stretch;
   width: 100%;
   background-color: #000033;
 }
