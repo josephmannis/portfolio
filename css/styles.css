@@ -279,6 +279,7 @@
 }
 
 .project-link {
+  text-decoration: none;
   user-select: none;
   font-weight: 200;
   color: #e9dbc3;
