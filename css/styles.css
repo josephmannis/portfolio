@@ -56,12 +56,19 @@
     right: 25vw;
   }
 }
+ul > li {
+  display: inline-block;
+  /* You can also add some margins here to make it look prettier */
+  zoom: 1;
+  *display: inline;
+  /* this fix is needed for IE7- */
+}
+
+ul {
+  margin-block-start: 0;
+}
+
 .nav-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  position: sticky;
-  top: 0;
   padding: 7vh 7vh 0 7vh;
   z-index: 1000;
 }
@@ -110,6 +117,94 @@
   align-self: center;
 }
 
+@media only screen and (min-width: 1081px) {
+  .nav-container {
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #nav-close,
+#nav-toggle {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1080px) {
+  .nav-group {
+    display: none;
+  }
+
+  .nav-menu {
+    position: absolute;
+    display: none;
+    left: -200px;
+    top: 0;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: visible;
+    transition: left 0.1s ease;
+    z-index: 999;
+  }
+
+  .nav-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 60px 0 0 0;
+    -webkit-box-shadow: -8px 0 8px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: -8px 0 8px rgba(0, 0, 0, 0.5);
+    box-shadow: -8px 0 8px rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 200px;
+    background: #151E7A;
+  }
+
+  .nav-menu a {
+    display: block;
+    padding: 0.75em 15px;
+    line-height: 1em;
+    font-size: 1em;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .nav-menu .nav-close {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .nav-menu:target,
+.nav-menu[aria-expanded=true] {
+    display: block;
+    left: 0;
+    outline: none;
+    -moz-box-shadow: 3px 0 12px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 3px 0 12px rgba(0, 0, 0, 0.25);
+    box-shadow: 3px 0 12px rgba(0, 0, 0, 0.25);
+    transition: left 0.1s ease;
+  }
+
+  .nav-menu:target .nav-close,
+.nav-menu[aria-expanded=true] .nav-close {
+    z-index: 1001;
+  }
+
+  .nav-menu:target ul,
+.nav-menu[aria-expanded=true] ul {
+    position: relative;
+    z-index: 1000;
+  }
+
+  @supports (position: fixed) {
+    .nav-menu,
+.nav-menu:target + .backdrop,
+.nav-menu[aria-expanded=true] + .backdrop {
+      position: fixed;
+    }
+  }
+}
 .fog-container {
   filter: brightness(100%) contrast(1500%);
 }
@@ -178,34 +273,63 @@
   transition: 0.2s;
 }
 
-#about-splash {
+#about-splash,
+#about-splash-mobile {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 62vw;
 }
 
 .about-text-container {
   position: absolute;
-  left: 58vw;
-  top: 12vh;
-  width: 26vw;
   z-index: 1;
 }
 
 .about-name {
   font-weight: bolder;
   color: #e9dbc3;
-  font-size: 8vw;
   margin-bottom: 0;
+  font-size: calc(48 + (72 - 48) * ((100 - 300) / (3840 - 300)));
 }
 
 .about-description {
   color: #e9dbc3;
-  font-size: 1vw;
   margin-top: 1vw;
+  font-size: calc(48 + (72 - 48) * ((100 - 300) / (3840 - 300)));
 }
 
+@media only screen and (min-width: 1081px) {
+  #about-splash {
+    bottom: 0;
+    left: 0;
+    width: 62vw;
+  }
+
+  #about-splash-mobile {
+    display: none;
+  }
+
+  .about-text-container {
+    left: 58vw;
+    top: 12vh;
+    width: 26vw;
+  }
+}
+@media only screen and (max-width: 1080px) {
+  #about-splash-mobile {
+    width: 80vw;
+    right: 0;
+    top: 0;
+  }
+
+  #about-splash {
+    display: none;
+  }
+
+  .about-text-container {
+    left: 7vh;
+    bottom: 7vh;
+    width: 40vw;
+  }
+}
 .project-information-container {
   padding-left: 10vw;
 }
@@ -377,6 +501,10 @@ img {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.fill-image {
+  width: 100%;
 }
 
 .header-text {

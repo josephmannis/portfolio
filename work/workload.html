@@ -42,13 +42,24 @@
             </a>
         </div>
 
-        <nav class="nav-bar">
-            <a href="../work/work.html" class="nav-link selected-link" id="work-nav"> work </a>
-            <a href="../about/about.html" class="nav-link" id="about-nav"> about </a>
-            <a target="_blank" href="../josephannisresume.pdf" class="nav-link" id="resume-nav"> resume </a>
-        </nav>
-    </header>
+        <a href="#nav-menu" id="nav-toggle">
+            <img class="nav-icon" src="../images/nav/hamburger.svg" class="sr-only">
+        </a>
 
+        <nav id="nav-menu" class="nav-menu">
+            <a href="#nav-toggle" id="nav-close" class="nav-close">
+                <img src="../images/nav/closeicon.svg" class="nav-icon">
+            </a>
+            <ul>
+                <li> <a href="../work/work.html" class="nav-link" id="work-nav"> work </a></li>
+                <li> <a class="nav-link  selected-link" id="about-nav"> about </a></li>
+                <li> <a target="_blank" href="../josephannisresume.pdf" class="nav-link" id="resume-nav"> resume </a>
+                </li>
+            </ul>
+        </nav>
+
+        <a href="#nav-toggle" class="backdrop" tabindex="-1" aria-hidden="true" hidden></a>
+    </header>
     <div class="project-information-container">
         <h1 class="project-title">workload</h1>
         <div class="description-container">
@@ -107,8 +118,6 @@
             </div>
         </div>
     </footer>
-
-
 </body>
 
 </html>

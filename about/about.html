@@ -39,11 +39,22 @@
         </a>
     </div>
 
-    <nav class="nav-bar">
-        <a href="../work/work.html" class="nav-link" id="work-nav"> work </a>
-        <a class="nav-link  selected-link" id="about-nav"> about </a>
-        <a target="_blank" href="../josephannisresume.pdf" class="nav-link" id="resume-nav"> resume </a>
+    <a href="#nav-menu" id="nav-toggle">
+        <img class="nav-icon" src="../images/nav/hamburger.svg" class="sr-only">
+    </a>
+
+    <nav id="nav-menu" class="nav-menu">
+        <a href="#nav-toggle" id="nav-close" class="nav-close">
+            <img src="../images/nav/closeicon.svg" class="nav-icon">
+        </a>
+        <ul>
+            <li> <a href="../work/work.html" class="nav-link" id="work-nav"> work </a></li>
+            <li> <a class="nav-link  selected-link" id="about-nav"> about </a></li>
+            <li> <a target="_blank" href="../josephannisresume.pdf" class="nav-link" id="resume-nav"> resume </a></li>
+        </ul>
     </nav>
+
+    <a href="#nav-toggle" class="backdrop" tabindex="-1" aria-hidden="true" hidden></a>
 </header>
 
 <body class="main-content-container">
@@ -56,15 +67,17 @@
         </p>
 
         <p class="about-description">
-            Aside from work, I love to explore outdoors, help lead two on-campus mentorship programs
-            (<a class="nav-link" href="https://web.northeastern.edu/generate/" target="_blank">Generate</a>
-            and
-            <a class="nav-link" href="https://web.northeastern.edu/makers/" target="_blank">Makers Club</a>), and ponder
+            Aside from work, I love to explore outdoors, help lead two on-campus mentorship programs as Branding
+            Director of
+            <a class="nav-link" href="https://web.northeastern.edu/generate/" target="_blank">Generate</a>
+            and Vice President of
+            <a class="nav-link" href="https://web.northeastern.edu/makers/" target="_blank">Makers Club</a>, and ponder
             the world around me.
         </p>
     </div>
 
     <img src="../images/about/about-splash.svg" id="about-splash">
+    <img src="../images/about/about-splash-flip.svg" id="about-splash-mobile">
 </body>
 
 </html>

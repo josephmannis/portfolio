@@ -1,27 +1,66 @@
-#about-splash {
+$minimum-text-header: 48;
+$maximum-text-header: 72;
+$minimum-text: 14;
+$maximum-text: 36;
+$maximum-viewport-width: 3840;
+$minimum-viewport-width: 300;
+
+#about-splash,
+#about-splash-mobile {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 62vw;
 }
 
 .about-text-container {
     position: absolute;
-    left: 58vw;
-    top: 12vh;
-    width: 26vw;
     z-index: 1;
 }
 
 .about-name {
     font-weight: bolder;
     color: $text_accent;
-    font-size: 8vw;
     margin-bottom: 0;
+    font-size: calc(#{$minimum-text-header} + (#{$maximum-text-header} - #{$minimum-text-header}) * ((100 - #{$minimum-viewport-width}) / (#{$maximum-viewport-width} - #{$minimum-viewport-width})));
 }
 
 .about-description {
     color: $text_accent;
-    font-size: 1vw;
     margin-top: 1vw;
+    font-size: calc(#{$minimum-text-header} + (#{$maximum-text-header} - #{$minimum-text-header}) * ((100 - #{$minimum-viewport-width}) / (#{$maximum-viewport-width} - #{$minimum-viewport-width})));
+}
+
+@media only screen and (min-width: 1081px) {
+    #about-splash {
+        bottom: 0;
+        left: 0;
+        width: 62vw;
+    }
+
+    // This is sad. But I'll figure out a better solution later.
+    #about-splash-mobile {
+        display: none;
+    }
+
+    .about-text-container {
+        left: 58vw;
+        top: 12vh;
+        width: 26vw;
+    }
+}
+
+@media only screen and (max-width: 1080px) {
+    #about-splash-mobile {
+        width: 80vw;
+        right: 0;
+        top: 0;
+    }
+
+    #about-splash {
+        display: none;
+    }
+
+    .about-text-container {
+        left: $border_margin;
+        bottom: $border_margin;
+        width: 40vw;
+    }
 }
