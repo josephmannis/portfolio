@@ -112,6 +112,8 @@ div {
         font-weight: bold;
         color: #fff;
         text-decoration: none;
+        padding-bottom: 0.25em;
+        font-size: 13vw;
     }
 
     .nav-menu .nav-close {
@@ -157,11 +159,5 @@ div {
         display: flex;
         height: 100%;
         flex-direction: column;
-    }
-
-    .nav-link {
-        padding-bottom: 0.25em;
-        font-size: 13vw;
-
     }
 }
