@@ -1,4 +1,4 @@
-ul>li {
+div>a {
     display: inline-block;
     /* You can also add some margins here to make it look prettier */
     zoom: 1;
@@ -6,7 +6,7 @@ ul>li {
     /* this fix is needed for IE7- */
 }
 
-ul {
+div {
     margin-block-start: 0;
 }
 
@@ -88,30 +88,33 @@ ul {
         display: none;
         left: -200px;
         top: 0;
-        height: 100%;
+        width: 100%;
         overflow-y: scroll;
         overflow-x: visible;
         transition: left .1s ease;
         z-index: 999;
     }
 
-    .nav-menu ul {
+    .nav-menu div {
         list-style: none;
         margin: 0;
         padding: 60px 0 0 0;
         -webkit-box-shadow: -8px 0 8px rgba(0, 0, 0, .5);
         -moz-box-shadow: -8px 0 8px rgba(0, 0, 0, .5);
         box-shadow: -8px 0 8px rgba(0, 0, 0, .5);
-        height: 100%;
-        width: 200px;
         background: $body_light;
+        width: 100%;
+        height: 100%;
+        border-radius: 0px 0px 30px 30px;
+
     }
 
     .nav-menu a {
         display: block;
-        padding: .75em 15px;
-        line-height: 1em;
-        font-size: 1em;
+        font-size: 13vw;
+        padding-left: 5vw;
+        font-weight: bold;
+
         color: #fff;
         text-decoration: none;
     }
@@ -131,6 +134,7 @@ ul {
         -webkit-box-shadow: 3px 0 12px rgba(0, 0, 0, .25);
         box-shadow: 3px 0 12px rgba(0, 0, 0, .25);
         transition: left .1s ease;
+        height: 50%;
     }
 
     .nav-menu:target .nav-close,
@@ -138,8 +142,8 @@ ul {
         z-index: 1001;
     }
 
-    .nav-menu:target ul,
-    .nav-menu[aria-expanded="true"] ul {
+    .nav-menu:target div,
+    .nav-menu[aria-expanded="true"] div {
         position: relative;
         z-index: 1000;
     }
@@ -151,5 +155,19 @@ ul {
         .nav-menu[aria-expanded="true"]+.backdrop {
             position: fixed;
         }
+    }
+
+    .nav-link-container {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+    }
+
+    .nav-link {
+        font-family: 'Work Sans';
+        padding: 0.25em 15px;
+        color: $text-main;
+        text-decoration: none;
+        user-select: none;
     }
 }
