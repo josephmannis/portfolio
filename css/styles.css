@@ -645,12 +645,12 @@ img {
   }
 }
 .background-gradient {
-  background: -moz-radial-gradient(44.63% -1.19%, ellipse farthest-corner, #efb982 0%, #d56e7f 60.68%);
-  background: -webkit-radial-gradient(44.63% -1.19%, ellipse farthest-corner, #efb982 0%, #d56e7f 60.68%);
-  background: -webkit-gradient(radial, 44.63% -1.19%, 0, 44.63% -1.19%, 3378.31, color-stop(0, #efb982), color-stop(0.6068, #d56e7f));
-  background: -o-radial-gradient(44.63% -1.19%, ellipse farthest-corner, #efb982 0%, #d56e7f 60.68%);
-  background: -ms-radial-gradient(44.63% -1.19%, ellipse farthest-corner, #efb982 0%, #d56e7f 60.68%);
-  background: radial-gradient(44.63% -1.19%, ellipse farthest-corner, #efb982 0%, #d56e7f 60.68%);
+  background: -moz-radial-gradient(44.63% -1.19%, ellipse farthest-corner, #efb982 0%, #d56e7f 30%);
+  background: -webkit-radial-gradient(44.63% -1.19%, ellipse farthest-corner, #efb982 0%, #d56e7f 30%);
+  background: -webkit-gradient(radial, 44.63% -1.19%, 0, 44.63% -1.19%, 3378.31, color-stop(0, #efb982), color-stop(0.3, #d56e7f));
+  background: -o-radial-gradient(44.63% -1.19%, ellipse farthest-corner, #efb982 0%, #d56e7f 30%);
+  background: -ms-radial-gradient(44.63% -1.19%, ellipse farthest-corner, #efb982 0%, #d56e7f 30%);
+  background: radial-gradient(44.63% -1.19%, ellipse farthest-corner, #efb982 0%, #d56e7f 30%);
   filter: progid:DXImageTransform.Microsoft.Alpha(Stlye=2);
 }
 
