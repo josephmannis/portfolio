@@ -1,4 +1,3 @@
-// TODO: Make the sun a base, and then only animate the rings
 #bg-sun {
     width: 50vw;
     transition: ease all $sun_piece_ease_duration;
@@ -27,7 +26,6 @@
     animation: spin_three $ring_three_rotation_duration linear infinite;
 }
 
-// TODO: use mixin for args?
 @keyframes spin_one {
     from {
         transform: rotate(0deg) translate(-5%) rotate(0deg);
