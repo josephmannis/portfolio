@@ -1,0 +1,29 @@
+Home Page:
+Text scalability
+Maybe try and mess with the ratios for the landscape some more
+Responsiveness for layout
+
+Firefox/safari fixes
+
+About Page:
+Responsiveness
+
+Work:
+Responsiveness - make menu nav on teeny scren
+next/previous links
+
+Github/linkedin links
+
+try two column for a grid look?
+Workload UI Sketches
+
+Variables everywhere
+
+Bells:
+Transitions for each page
+404 Page
+Animate the image in the about page
+Aria labels
+Fix up the background gradient
+Animate in the landscape on load
+Fix the animation problems with the header - maybe just have a fancier one?

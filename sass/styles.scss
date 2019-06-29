@@ -5,6 +5,7 @@
 @import "./work";
 @import "./about";
 @import "./work-page.scss";
+@import "./homenav";
 
 
 * {
@@ -164,6 +165,12 @@ img {
     align-items: stretch;
     width: 100%;
     background-color: $body_background;
+}
+
+@media only screen and (max-width: $mobile_screen_size) {
+    .header-text {
+        display: none;
+    }
 }
 
 @import "./queries";
