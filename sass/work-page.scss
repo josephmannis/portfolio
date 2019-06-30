@@ -5,7 +5,7 @@
 .project-title {
     font-weight: bolder;
     color: $text_accent;
-    font-size: 8vw;
+    @include font-scale(72, 136, 72px);
 }
 
 .description-container {
@@ -14,8 +14,8 @@
 
 .project-information {
     color: $text_accent;
-    font-size: 1vw;
-    margin-top: 2vw;
+    margin-top: 2vh;
+    @include font-scale(10, 14, 14px);
 }
 
 .project-date {
@@ -75,7 +75,7 @@
     user-select: none;
     font-weight: 200;
     color: $text_accent;
-    font-size: 24px;
+    @include font-scale(12, 18, 18px);
     transition: $nav_expansion_duration;
     transition-timing-function: ease-in-out;
 }

@@ -16,7 +16,8 @@ div {
 }
 
 .nav-bar {
-    font-size: $nav_text_size;
+    // font-size: $nav_text_size;
+    @include font-scale(12, 18, 18px);
 }
 
 .nav-icon {
@@ -37,11 +38,14 @@ div {
 
 .nav-link {
     font-family: 'Work Sans';
-    font-size: 1em;
     font-weight: normal;
     color: $text-main;
     text-decoration: none;
     user-select: none;
+}
+
+header .nav-link {
+    @include font-scale(12, 20, 20px);
 }
 
 .selected-link {

@@ -1,0 +1,3 @@
+@mixin font-scale($min-font, $max-font, $min-px) {
+    font-size: calc(#{$min-px} + (#{$max-font} - #{$min-font}) * ((100vw - 300px) / (3840 - 300)));
+}

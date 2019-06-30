@@ -74,7 +74,7 @@ div {
 }
 
 .nav-bar {
-  font-size: 22px;
+  font-size: calc(18px + (18 - 12) * ((100vw - 300px) / (3840 - 300)));
 }
 
 .nav-icon {
@@ -94,11 +94,14 @@ div {
 
 .nav-link {
   font-family: "Work Sans";
-  font-size: 1em;
   font-weight: normal;
   color: #fff;
   text-decoration: none;
   user-select: none;
+}
+
+header .nav-link {
+  font-size: calc(20px + (20 - 12) * ((100vw - 300px) / (3840 - 300)));
 }
 
 .selected-link {
@@ -302,13 +305,13 @@ div {
   font-weight: bolder;
   color: #e9dbc3;
   margin-bottom: 0;
-  font-size: calc(48 + (72 - 48) * ((100 - 300) / (3840 - 300)));
+  font-size: calc(72px + (212 - 72) * ((100vw - 300px) / (3840 - 300)));
 }
 
 .about-description {
   color: #e9dbc3;
   margin-top: 1vw;
-  font-size: calc(48 + (72 - 48) * ((100 - 300) / (3840 - 300)));
+  font-size: calc(12px + (36 - 12) * ((100vw - 300px) / (3840 - 300)));
 }
 
 @media only screen and (min-width: 1081px) {
@@ -352,7 +355,7 @@ div {
 .project-title {
   font-weight: bolder;
   color: #e9dbc3;
-  font-size: 8vw;
+  font-size: calc(72px + (136 - 72) * ((100vw - 300px) / (3840 - 300)));
 }
 
 .description-container {
@@ -361,8 +364,8 @@ div {
 
 .project-information {
   color: #e9dbc3;
-  font-size: 1vw;
-  margin-top: 2vw;
+  margin-top: 2vh;
+  font-size: calc(14px + (14 - 10) * ((100vw - 300px) / (3840 - 300)));
 }
 
 .project-date {
@@ -422,7 +425,7 @@ div {
   user-select: none;
   font-weight: 200;
   color: #e9dbc3;
-  font-size: 24px;
+  font-size: calc(18px + (18 - 12) * ((100vw - 300px) / (3840 - 300)));
   transition: 0.1s;
   transition-timing-function: ease-in-out;
 }
@@ -529,14 +532,14 @@ body {
 h1 {
   font-weight: 600;
   color: #e9dbc3;
-  font-size: 48px;
+  font-size: calc(48px + (60 - 48) * ((100vw - 300px) / (3840 - 300)));
   margin-bottom: 0;
 }
 
 h2 {
   font-weight: normal;
   color: #fff;
-  font-size: 36px;
+  font-size: calc(24px + (48 - 24) * ((100vw - 300px) / (3840 - 300)));
   margin-top: 0;
   margin-bottom: 0;
 }

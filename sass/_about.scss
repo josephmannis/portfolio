@@ -2,8 +2,7 @@ $minimum-text-header: 48;
 $maximum-text-header: 72;
 $minimum-text: 14;
 $maximum-text: 36;
-$maximum-viewport-width: 3840;
-$minimum-viewport-width: 300;
+
 
 #about-splash,
 #about-splash-mobile {
@@ -19,13 +18,13 @@ $minimum-viewport-width: 300;
     font-weight: bolder;
     color: $text_accent;
     margin-bottom: 0;
-    font-size: calc(#{$minimum-text-header} + (#{$maximum-text-header} - #{$minimum-text-header}) * ((100 - #{$minimum-viewport-width}) / (#{$maximum-viewport-width} - #{$minimum-viewport-width})));
+    @include font-scale(72, 212, 72px);
 }
 
 .about-description {
     color: $text_accent;
     margin-top: 1vw;
-    font-size: calc(#{$minimum-text-header} + (#{$maximum-text-header} - #{$minimum-text-header}) * ((100 - #{$minimum-viewport-width}) / (#{$maximum-viewport-width} - #{$minimum-viewport-width})));
+    @include font-scale(12, 36, 12px);
 }
 
 @media only screen and (min-width: 1081px) {
