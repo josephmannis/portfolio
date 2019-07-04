@@ -23,7 +23,6 @@ html {
 body {
     font-family: 'Work Sans';
     margin: 0px;
-    overscroll-behavior: none;
 }
 
 h1 {
@@ -88,6 +87,7 @@ img {
 
     position: absolute;
     bottom: 0;
+    z-index: -1;
 }
 
 .splash-img-right {
@@ -129,6 +129,10 @@ img {
 #left-bg-fog {
     max-width: $left_background_fog_width;
     // animation: wave 6s ease infinite;
+}
+
+#sun-container {
+    z-index: 0;
 }
 
 @keyframes wave {

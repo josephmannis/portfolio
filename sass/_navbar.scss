@@ -12,7 +12,6 @@ div {
 
 .nav-container {
     padding: $border_margin $border_margin 0 $border_margin;
-    z-index: 999;
 }
 
 .nav-bar {
@@ -145,13 +144,13 @@ header .nav-link {
 
     .nav-menu:target .nav-close,
     .nav-menu[aria-expanded="true"] .nav-close {
-        z-index: 1001;
+        z-index: 999;
     }
 
     .nav-menu:target div,
     .nav-menu[aria-expanded="true"] div {
         position: relative;
-        z-index: 1000;
+        z-index: 998;
     }
 
     @supports (position: fixed) {
@@ -172,4 +171,5 @@ header .nav-link {
     #home-nav {
         display: initial;
     }
+
 }

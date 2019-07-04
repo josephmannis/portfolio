@@ -71,7 +71,6 @@ div {
 
 .nav-container {
   padding: 7vh 7vh 0 7vh;
-  z-index: 999;
 }
 
 .nav-bar {
@@ -198,13 +197,13 @@ header .nav-link {
 
   .nav-menu:target .nav-close,
 .nav-menu[aria-expanded=true] .nav-close {
-    z-index: 1001;
+    z-index: 999;
   }
 
   .nav-menu:target div,
 .nav-menu[aria-expanded=true] div {
     position: relative;
-    z-index: 1000;
+    z-index: 998;
   }
 
   @supports (position: fixed) {
@@ -261,8 +260,6 @@ header .nav-link {
 .work-links {
   max-width: 100%;
   padding-left: 11vw;
-  overflow-y: scroll;
-  overscroll-behavior: none;
 }
 
 .work-link {
@@ -295,6 +292,7 @@ header .nav-link {
 #about-splash,
 #about-splash-mobile {
   position: absolute;
+  z-index: -1;
 }
 
 .about-text-container {
@@ -346,7 +344,7 @@ header .nav-link {
   .about-text-container {
     left: 7vh;
     bottom: 7vh;
-    width: 40vw;
+    width: 60%;
   }
 }
 .project-information-container {
@@ -479,6 +477,7 @@ header .nav-link {
 
   .description-container {
     width: 100%;
+    padding-right: 10vw;
   }
 }
 @media only screen and (max-width: 800px) {
@@ -531,7 +530,6 @@ html {
 body {
   font-family: "Work Sans";
   margin: 0px;
-  overscroll-behavior: none;
 }
 
 h1 {
@@ -593,6 +591,7 @@ img {
   user-select: none;
   position: absolute;
   bottom: 0;
+  z-index: -1;
 }
 
 .splash-img-right {
@@ -633,6 +632,10 @@ img {
 
 #left-bg-fog {
   max-width: 60vw;
+}
+
+#sun-container {
+  z-index: 0;
 }
 
 @keyframes wave {
