@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Work+Sans&display=swap");
+
 #bg-sun {
   width: 50vw;
   transition: ease all 2s;
@@ -8,6 +9,7 @@
   width: 50vw;
   transition: ease all 2s;
   top: 0;
+  w
 }
 
 .sun-piece {
@@ -31,33 +33,40 @@
   from {
     transform: rotate(0deg) translate(-5%) rotate(0deg);
   }
+
   to {
     transform: rotate(360deg) translate(-5%) rotate(-360deg);
   }
 }
+
 @keyframes spin_two {
   from {
     transform: rotate(0deg) translate(5%) rotate(0deg);
   }
+
   to {
     transform: rotate(360deg) translate(5%) rotate(-360deg);
   }
 }
+
 @keyframes spin_three {
   from {
     transform: rotate(0deg) translate(-7%) rotate(0deg);
   }
+
   to {
     transform: rotate(360deg) translate(-7%) rotate(-360deg);
   }
 }
+
 @media only screen and (max-width: 800px) {
   .sun-piece {
     position: absolute;
     right: 25vw;
   }
 }
-div > a {
+
+div>a {
   display: inline-block;
   /* You can also add some margins here to make it look prettier */
   zoom: 1;
@@ -136,10 +145,11 @@ header .nav-link {
   }
 
   #nav-close,
-#nav-toggle {
+  #nav-toggle {
     display: none;
   }
 }
+
 @media only screen and (max-width: 800px) {
   .nav-group {
     display: none;
@@ -184,7 +194,7 @@ header .nav-link {
   }
 
   .nav-menu:target,
-.nav-menu[aria-expanded=true] {
+  .nav-menu[aria-expanded=true] {
     display: block;
     left: 0;
     outline: none;
@@ -197,23 +207,25 @@ header .nav-link {
   }
 
   .nav-menu:target .nav-close,
-.nav-menu[aria-expanded=true] .nav-close {
+  .nav-menu[aria-expanded=true] .nav-close {
     z-index: 1001;
   }
 
   .nav-menu:target div,
-.nav-menu[aria-expanded=true] div {
+  .nav-menu[aria-expanded=true] div {
     position: relative;
     z-index: 1000;
   }
 
   @supports (position: fixed) {
+
     .nav-menu,
-.nav-menu:target + .backdrop,
-.nav-menu[aria-expanded=true] + .backdrop {
+    .nav-menu:target+.backdrop,
+    .nav-menu[aria-expanded=true]+.backdrop {
       position: fixed;
     }
   }
+
   .nav-link-container {
     display: flex;
     height: 100%;
@@ -224,6 +236,7 @@ header .nav-link {
     display: initial;
   }
 }
+
 .fog-container {
   filter: brightness(100%) contrast(1500%);
 }
@@ -332,6 +345,7 @@ header .nav-link {
     width: 26vw;
   }
 }
+
 @media only screen and (max-width: 1080px) {
   #about-splash-mobile {
     width: 80vw;
@@ -349,6 +363,7 @@ header .nav-link {
     width: 40vw;
   }
 }
+
 .project-information-container {
   padding-left: 10vw;
 }
@@ -471,12 +486,14 @@ header .nav-link {
     padding-left: 2.5vw;
   }
 }
+
 @media only screen and (max-width: 1080px) {
   .work-subimage {
     flex-grow: 1;
     flex-basis: 100%;
   }
 }
+
 @media only screen and (max-width: 800px) {
   .group-home {
     display: flex;
@@ -515,6 +532,7 @@ header .nav-link {
     margin: 0;
   }
 }
+
 * {
   box-sizing: border-box;
 }
@@ -635,19 +653,24 @@ img {
   0% {
     width: 60vw;
   }
+
   25% {
     width: 55vw;
   }
+
   50% {
     width: 50vw;
   }
+
   75% {
     width: 55vw;
   }
+
   100% {
     width: 60vw;
   }
 }
+
 .background-gradient {
   background: -moz-radial-gradient(44.63% -1.19%, ellipse farthest-corner, #efb982 0%, #d56e7f 30%);
   background: -webkit-radial-gradient(44.63% -1.19%, ellipse farthest-corner, #efb982 0%, #d56e7f 30%);
@@ -672,12 +695,14 @@ img {
     display: none;
   }
 }
+
 @media only screen and (max-width: 800px) {
   .splash-img-top {
     top: 15%;
     left: 25%;
   }
 }
+
 @media only screen and (max-height: 800px) and (min-width: 800px) {
   .splash-img {
     bottom: -20%;
@@ -691,6 +716,7 @@ img {
     bottom: 0;
   }
 }
+
 @media only screen and (max-width: 1919px) {
   #right-fog {
     max-width: 1496px;

@@ -97,8 +97,6 @@
     position: absolute;
 }
 
-#previous-link {}
-
 #next-link {
     align-self: flex-end;
 }
@@ -127,5 +125,9 @@
     .work-subimage {
         flex-grow: 1;
         flex-basis: 100%;
+    }
+
+    .description-container {
+        width: 100vw;
     }
 }
