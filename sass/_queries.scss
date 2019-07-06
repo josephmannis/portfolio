@@ -20,7 +20,7 @@
     }
 }
 
-@media only screen and (max-width: 1919px) {
+@media only screen and (max-width: $mobile_screen_size) {
     #right-fog {
         max-width: $static_right_fog_width;
     }

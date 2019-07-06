@@ -19,13 +19,13 @@ $maximum-text: 36;
     font-weight: bolder;
     color: $text_accent;
     margin-bottom: 0;
-    @include font-scale(72, 212, 72px);
+    font-size: $header_text_size;
 }
 
 .about-description {
     color: $text_accent;
     margin-top: 1vw;
-    @include font-scale(12, 36, 12px);
+    font-size: $body_text_size;
 }
 
 @media only screen and (min-width: 1081px) {
@@ -42,8 +42,10 @@ $maximum-text: 36;
 
     .about-text-container {
         left: 58vw;
-        top: 12vh;
         width: 26vw;
+        height: 100%;
+        @include column;
+        justify-content: center;
     }
 }
 

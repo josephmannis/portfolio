@@ -15,8 +15,7 @@ div {
 }
 
 .nav-bar {
-    // font-size: $nav_text_size;
-    @include font-scale(12, 18, 18px);
+    font-size: $nav_link_text_size;
 }
 
 .nav-icon {
@@ -38,13 +37,13 @@ div {
 .nav-link {
     font-family: 'Work Sans';
     font-weight: normal;
-    color: $text-main;
+    color: $text_main;
     text-decoration: none;
     user-select: none;
 }
 
 header .nav-link {
-    @include font-scale(12, 20, 20px);
+    font-size: $nav_link_text_size;
 }
 
 .selected-link {
@@ -103,8 +102,7 @@ header .nav-link {
     }
 
     .nav-menu div {
-        display: flex;
-        flex-direction: column;
+        @include column;
         justify-content: center;
 
         background: $body_light;
@@ -120,7 +118,7 @@ header .nav-link {
         color: #fff;
         text-decoration: none;
         padding-bottom: 0.25em;
-        font-size: 13vw;
+        font-size: $nav_hamburger_link_size;
     }
 
     .nav-menu .nav-close {
@@ -163,9 +161,8 @@ header .nav-link {
     }
 
     .nav-link-container {
-        display: flex;
         height: 100%;
-        flex-direction: column;
+        @include column;
     }
 
     #home-nav {

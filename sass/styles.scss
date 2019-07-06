@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Work+Sans&display=swap');
-@import "./variables.scss";
 @import "./mixins";
+@import "./variables.scss";
 @import "./sunstyles.scss";
 @import "./navbar.scss";
 @import "./foganimations";
@@ -8,7 +7,6 @@
 @import "./about";
 @import "./work-page.scss";
 @import "./homenav";
-
 
 
 * {
@@ -28,15 +26,14 @@ body {
 h1 {
     font-weight: 600;
     color: $text_accent;
-    @include font-scale(48, 60, 48px);
+    font-size: $index_text_header_size;
     margin-bottom: 0;
 }
 
 h2 {
     font-weight: normal;
     color: $text_main;
-
-    @include font-scale(24, 48, 24px);
+    font-size: $index_text_subheader_size;
 
     margin-top: 0;
     margin-bottom: 0;
@@ -168,8 +165,7 @@ img {
 }
 
 .main-content-container {
-    display: flex;
-    flex-direction: column;
+    @include column;
     min-height: 100%;
     align-items: stretch;
     width: 100%;
