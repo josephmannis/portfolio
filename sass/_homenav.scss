@@ -1,10 +1,8 @@
 @media only screen and (max-width: $mobile_screen_size) {
     .group-home {
         display: flex;
-
         position: absolute;
         top: 23%;
-
     }
 
     .nav-icon-home {
@@ -24,11 +22,6 @@
         position: initial;
         @include column;
         text-align: center;
-        // z-index: 999;
-    }
-
-    .nav-link-home {
-        // z-index: 999;
     }
 
     .nav-home a {

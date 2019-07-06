@@ -261,7 +261,6 @@ header .nav-link {
 }
 
 .work-links {
-  max-width: 100%;
   padding-left: 11vw;
 }
 
@@ -292,6 +291,13 @@ header .nav-link {
   transition: 0.2s;
 }
 
+@media only screen and (max-width: 800px) {
+  .work-links {
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 11vw;
+  }
+}
 #about-splash,
 #about-splash-mobile {
   position: absolute;

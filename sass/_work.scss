@@ -8,7 +8,6 @@
 }
 
 .work-links {
-    max-width: 100%;
     padding-left: 11vw;
 }
 
@@ -37,4 +36,12 @@
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: $text_selected;
     transition: $text_selection_duration;
+}
+
+@media only screen and (max-width: $mobile_screen_size) {
+    .work-links {
+        position: absolute;
+        bottom: 0;
+        padding-bottom: 11vw;
+    }
 }

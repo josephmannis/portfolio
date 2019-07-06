@@ -23,8 +23,7 @@
 }
 
 .work-container {
-    display: flex;
-    flex-direction: row;
+    @include row;
     align-content: space-around;
     flex-wrap: wrap;
     padding: 10vw 10vw 0 10vw;
@@ -62,8 +61,7 @@
 }
 
 .project-link-container {
-    display: flex;
-    flex-direction: row;
+    @include row;
     justify-content: space-between;
     align-items: flex-end;
     height: 100%;
