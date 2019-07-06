@@ -1,12 +1,21 @@
+function showNav() {
+    document.getElementById('nav-menu').style.display = 'initial'
+}
+
+function hideNav() {
+    document.getElementById('nav-menu').style.display = 'none'
+}
+
 document.addEventListener('click', function (event) {
+    if (event.target.id == 'nav-toggle') {
+        showNav()
+    }
 
-    // If the clicked element doesn't have the right selector, bail
-    if (!(event.target.matches('.nav-menu') || !event.target.matches('.nav-close'))) return;
-
-    // Don't follow the link
-    event.preventDefault();
-
-    // Log the clicked element in the console
-    console.log(event.target);
-
+    if (event.target.id == 'nav-close') {
+        hideNav()
+    }
 }, false);
+
+window.onhashchange = function () {
+    hideNav()
+}
