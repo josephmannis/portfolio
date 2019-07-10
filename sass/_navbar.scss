@@ -12,6 +12,7 @@ div {
 
 .nav-container {
     padding: $border_margin $border_margin 0 $border_margin;
+    z-index: 999;
 }
 
 .nav-bar {
