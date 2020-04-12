@@ -34,40 +34,33 @@ Returns a unit value that scales based on the max and min between the maximum an
   from {
     transform: rotate(0deg) translate(-5%) rotate(0deg);
   }
-
   to {
     transform: rotate(360deg) translate(-5%) rotate(-360deg);
   }
 }
-
 @keyframes spin_two {
   from {
     transform: rotate(0deg) translate(5%) rotate(0deg);
   }
-
   to {
     transform: rotate(360deg) translate(5%) rotate(-360deg);
   }
 }
-
 @keyframes spin_three {
   from {
     transform: rotate(0deg) translate(-7%) rotate(0deg);
   }
-
   to {
     transform: rotate(360deg) translate(-7%) rotate(-360deg);
   }
 }
-
 @media only screen and (max-width: 800px) {
   .sun-piece {
     position: absolute;
     right: 25vw;
   }
 }
-
-div>a {
+div > a {
   display: inline-block;
   /* You can also add some margins here to make it look prettier */
   zoom: 1;
@@ -146,11 +139,10 @@ header .nav-link {
   }
 
   #nav-close,
-  #nav-toggle {
+#nav-toggle {
     display: none;
   }
 }
-
 @media only screen and (max-width: 800px) {
   .nav-group {
     display: none;
@@ -199,14 +191,12 @@ header .nav-link {
   }
 
   @supports (position: fixed) {
-
     .nav-menu,
-    .nav-menu:target+.backdrop,
-    .nav-menu[aria-expanded=true]+.backdrop {
+.nav-menu:target + .backdrop,
+.nav-menu[aria-expanded=true] + .backdrop {
       position: fixed;
     }
   }
-
   .nav-link-container {
     height: 100%;
     display: flex;
@@ -217,7 +207,6 @@ header .nav-link {
     display: initial;
   }
 }
-
 .fog-container {
   filter: brightness(100%) contrast(1500%);
 }
@@ -290,7 +279,6 @@ header .nav-link {
     padding-bottom: 11vw;
   }
 }
-
 #about-splash,
 #about-splash-mobile {
   position: absolute;
@@ -335,7 +323,6 @@ header .nav-link {
     justify-content: center;
   }
 }
-
 @media only screen and (max-width: 1080px) {
   #about-splash-mobile {
     width: 80vw;
@@ -353,7 +340,6 @@ header .nav-link {
     width: 60%;
   }
 }
-
 .project-information-container {
   padding-left: 10vw;
 }
@@ -476,7 +462,6 @@ header .nav-link {
     padding-left: 2.5vw;
   }
 }
-
 @media only screen and (max-width: 1080px) {
   .work-subimage {
     flex-grow: 1;
@@ -488,7 +473,6 @@ header .nav-link {
     padding-right: 10vw;
   }
 }
-
 @media only screen and (max-width: 800px) {
   .group-home {
     display: flex;
@@ -527,7 +511,6 @@ header .nav-link {
     margin: 0;
   }
 }
-
 * {
   box-sizing: border-box;
 }
@@ -652,24 +635,19 @@ img {
   0% {
     width: 60vw;
   }
-
   25% {
     width: 55vw;
   }
-
   50% {
     width: 50vw;
   }
-
   75% {
     width: 55vw;
   }
-
   100% {
     width: 60vw;
   }
 }
-
 .background-gradient {
   background: -moz-radial-gradient(44.63% -1.19%, ellipse farthest-corner, #efb982 0%, #d56e7f 30%);
   background: -webkit-radial-gradient(44.63% -1.19%, ellipse farthest-corner, #efb982 0%, #d56e7f 30%);
@@ -694,19 +672,13 @@ img {
     display: none;
   }
 }
-
 @media only screen and (max-width: 800px) {
   .splash-img-top {
     top: 15%;
     left: 25%;
   }
 }
-
 @media only screen and (max-height: 800px) and (min-width: 800px) {
-  .splash-img {
-    bottom: -20%;
-  }
-
   .container {
     overflow: hidden;
   }
@@ -715,7 +687,6 @@ img {
     bottom: 0;
   }
 }
-
 @media only screen and (max-width: 800px) {
   #right-fog {
     max-width: 1496px;
